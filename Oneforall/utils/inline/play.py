@@ -36,11 +36,15 @@ def track_markup(_, videoid, user_id, channel, fplay):
 
 
 
+
+
 def stream_markup_timer(_, vidid, chat_id, played, dur):
     played_sec = time_to_seconds(played)
     duration_sec = time_to_seconds(dur)
     percentage = (played_sec / duration_sec) * 100
     umm = math.floor(percentage)
+    
+    # Progress Bar Logic
     if 0 < umm <= 10:
         bar = "❍─────────"
     elif 10 < umm < 20:
@@ -61,8 +65,10 @@ def stream_markup_timer(_, vidid, chat_id, played, dur):
         bar = "━━━━━━━━❍─"
     else:
         bar = "━━━━━━━━━❍"
+
     buttons = [
-                [
+        [
+            # Timer Bar - PRIMARY (Blue)
             InlineKeyboardButton(
                 text=f"{played} {bar} {dur}",
                 callback_data="GetTimer",
@@ -70,25 +76,50 @@ def stream_markup_timer(_, vidid, chat_id, played, dur):
                 icon_custom_emoji_id=5204046146955153467
             )
         ],
-          [
-            # Skip - PRIMARY (Blue)
-            InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}", style=ButtonStyle.DANGER),
-            
-            # Pause - DANGER (Red)
-            InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}", style=ButtonStyle.SUCCESS),
-            
-            # Resume - SUCCESS (Green)
-            InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}", style=ButtonStyle.PRIMARY),
-            
-            # Replay - PRIMARY (Blue)
-            InlineKeyboardButton(text="↻", callback_data=f"ADMIN Replay|{chat_id}", style=ButtonStyle.SUCCESS),
-            
-            # Stop - DANGER (Red)
-            InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}", style=ButtonStyle.DANGER),
+        [
+            # Skip Button - DANGER (Red)
+            InlineKeyboardButton(
+                text=" ", 
+                callback_data=f"ADMIN Skip|{chat_id}", 
+                style=ButtonStyle.DANGER,
+                icon_custom_emoji_id=5114239772365163173
+            ),
+            # Pause Button - SUCCESS (Green)
+            InlineKeyboardButton(
+                text=" ", 
+                callback_data=f"ADMIN Pause|{chat_id}", 
+                style=ButtonStyle.SUCCESS,
+                icon_custom_emoji_id=5359543311897998264
+            ),
+            # Resume Button - PRIMARY (Blue)
+            InlineKeyboardButton(
+                text=" ", 
+                callback_data=f"ADMIN Resume|{chat_id}", 
+                style=ButtonStyle.PRIMARY,
+                icon_custom_emoji_id=5113954831349843630
+            ),
+            # Replay Button - SUCCESS (Green)
+            InlineKeyboardButton(
+                text=" ", 
+                callback_data=f"ADMIN Replay|{chat_id}", 
+                style=ButtonStyle.SUCCESS,
+                icon_custom_emoji_id=5346321684574003384
+            ),
+            # Stop Button - DANGER (Red)
+            InlineKeyboardButton(
+                text=" ", 
+                callback_data=f"ADMIN Stop|{chat_id}", 
+                style=ButtonStyle.DANGER,
+                icon_custom_emoji_id=5911274703367968100 # Using Play/Stop emoji here as per your request
+            ),
         ],
         [
             # Close - DANGER (Red)
-            InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close", style=ButtonStyle.DANGER)
+            InlineKeyboardButton(
+                text=_["CLOSE_BUTTON"], 
+                callback_data="close", 
+                style=ButtonStyle.DANGER
+            )
         ],
     ]
     return buttons
@@ -97,39 +128,95 @@ def stream_markup_timer(_, vidid, chat_id, played, dur):
 def stream_markup(_, videoid, chat_id):
     buttons = [
         [
-            # Resume - SUCCESS (Green)
+            # Resume - DANGER (Red)
             InlineKeyboardButton(
-                text="▷", 
+                text=" ", 
                 callback_data=f"ADMIN Resume|{chat_id}", 
-                style=ButtonStyle.DANGER
+                style=ButtonStyle.DANGER,
+                icon_custom_emoji_id=5113954831349843630
             ),
-            # Pause - DANGER (Red)
+            # Pause - SUCCESS (Green)
             InlineKeyboardButton(
-                text="II", 
+                text=" ", 
                 callback_data=f"ADMIN Pause|{chat_id}", 
-                style=ButtonStyle.SUCCESS
+                style=ButtonStyle.SUCCESS,
+                icon_custom_emoji_id=5359543311897998264
             ),
             # Replay - PRIMARY (Blue)
             InlineKeyboardButton(
-                text="↻", 
+                text=" ", 
                 callback_data=f"ADMIN Replay|{chat_id}", 
-                style=ButtonStyle.PRIMARY
+                style=ButtonStyle.PRIMARY,
+                icon_custom_emoji_id=5346321684574003384
             ),
-            # Skip - PRIMARY (Blue)
+            # Skip - SUCCESS (Green)
             InlineKeyboardButton(
-                text="‣‣I", 
+                text=" ", 
                 callback_data=f"ADMIN Skip|{chat_id}", 
-                style=ButtonStyle.SUCCESS
+                style=ButtonStyle.SUCCESS,
+                icon_custom_emoji_id=5114239772365163173
             ),
             # Stop - DANGER (Red)
             InlineKeyboardButton(
-                text="▢", 
+                text=" ", 
                 callback_data=f"ADMIN Stop|{chat_id}", 
-                style=ButtonStyle.DANGER
+                style=ButtonStyle.DANGER,
+                icon_custom_emoji_id=5911274703367968100
             ),
         ],
         [
             # Close - DANGER (Red)
+            InlineKeyboardButton(
+                text=_["CLOSE_BUTTON"], 
+                callback_data="close", 
+                style=ButtonStyle.DANGER
+            )
+        ],
+    ]
+    return buttons
+
+
+def stream_markup(_, videoid, chat_id):
+    buttons = [
+        [
+            # Resume Button - DANGER (Red) | Premium Emoji
+            InlineKeyboardButton(
+                text=" ", 
+                callback_data=f"ADMIN Resume|{chat_id}", 
+                style=ButtonStyle.DANGER,
+                icon_custom_emoji_id=5113954831349843630
+            ),
+            # Pause Button - SUCCESS (Green) | Premium Emoji
+            InlineKeyboardButton(
+                text=" ", 
+                callback_data=f"ADMIN Pause|{chat_id}", 
+                style=ButtonStyle.SUCCESS,
+                icon_custom_emoji_id=5359543311897998264
+            ),
+            # Replay Button - PRIMARY (Blue) | Premium Emoji
+            InlineKeyboardButton(
+                text=" ", 
+                callback_data=f"ADMIN Replay|{chat_id}", 
+                style=ButtonStyle.PRIMARY,
+                icon_custom_emoji_id=5346321684574003384
+            ),
+            # Skip Button - SUCCESS (Green) | Premium Emoji
+            InlineKeyboardButton(
+                text=" ", 
+                callback_data=f"ADMIN Skip|{chat_id}", 
+                style=ButtonStyle.SUCCESS,
+                icon_custom_emoji_id=5114239772365163173
+            ),
+            # Stop Button - DANGER (Red) | Premium Emoji
+            InlineKeyboardButton(
+                text=" ", 
+                callback_data=f"ADMIN Stop|{chat_id}", 
+                style=ButtonStyle.DANGER,
+                icon_custom_emoji_id=5911274703367968100
+            ),
+        ],
+        [
+            # Close Button - DANGER (Red)
             InlineKeyboardButton(
                 text=_["CLOSE_BUTTON"], 
                 callback_data="close", 
