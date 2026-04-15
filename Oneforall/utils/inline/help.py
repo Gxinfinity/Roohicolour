@@ -41,9 +41,9 @@ def help_pannel(_, START: Union[bool, int] = None):
                 InlineKeyboardButton(text=_["H_B_6"], callback_data="help_callback hb6", style=ButtonStyle.PRIMARY),
             ],
             [
-                InlineKeyboardButton(text=_["H_B_7"], callback_data="help_callback hb7", style=ButtonStyle.SUCCESS),
+                InlineKeyboardButton(text=_["H_B_7"], callback_data="help_callback hb7", style=ButtonStyle.DANGER),
                 InlineKeyboardButton(text=_["H_B_8"], callback_data="help_callback hb8", style=ButtonStyle.PRIMARY),
-                InlineKeyboardButton(text=_["H_B_9"], callback_data="help_callback hb9", style=ButtonStyle.SUCCESS),
+                InlineKeyboardButton(text=_["H_B_9"], callback_data="help_callback hb9", style=ButtonStyle.DANGER),
             ],
             [
                 InlineKeyboardButton(text=_["H_B_10"], callback_data="help_callback hb10", style=ButtonStyle.PRIMARY),
@@ -56,7 +56,7 @@ def help_pannel(_, START: Union[bool, int] = None):
                 InlineKeyboardButton(text=_["H_B_15"], callback_data="help_callback hb15", style=ButtonStyle.SUCCESS),
             ],
             [
-                InlineKeyboardButton(text=_["H_B_26"], callback_data="help_callback hb17", style=ButtonStyle.PRIMARY),
+                InlineKeyboardButton(text=_["H_B_26"], callback_data="help_callback hb17", style=ButtonStyle.DANGER),
                 InlineKeyboardButton(text=_["H_B_25"], callback_data="help_callback hb16", style=ButtonStyle.SUCCESS),
                 InlineKeyboardButton(text="🎮 ғᴜɴ ɢᴀᴍᴇ", callback_data="help_callback hb21", style=ButtonStyle.DANGER),
             ],
