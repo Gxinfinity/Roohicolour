@@ -21,9 +21,9 @@ class BUTTONS(object):
             InlineKeyboardButton("🔍 Sᴇᴀʀᴄʜ", callback_data="mplus HELP_Search", style=ButtonStyle.SUCCESS),
         ],
         [
-            InlineKeyboardButton("🔤 ғᴏɴᴛ", callback_data="mplus HELP_Font", style=ButtonStyle.PRIMARY),
+            InlineKeyboardButton("🔤 ғᴏɴᴛ", callback_data="mplus HELP_Font", style=ButtonStyle.DANGER),
             InlineKeyboardButton("🤖 Bᴏᴛs", callback_data="mplus HELP_Bots", style=ButtonStyle.SUCCESS),
-            InlineKeyboardButton("📊 Ⓣ-ɢʀᴀᴘʜ", callback_data="mplus HELP_TG", style=ButtonStyle.PRIMARY),
+            InlineKeyboardButton("📊 Ⓣ-ɢʀᴀᴘʜ", callback_data="mplus HELP_TG", style=ButtonStyle.DANGER),
         ],
         [
             InlineKeyboardButton("📂 Sᴏᴜʀᴄᴇ", callback_data="mplus HELP_Source", style=ButtonStyle.SUCCESS),
