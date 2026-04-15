@@ -72,16 +72,16 @@ def stream_markup_timer(_, vidid, chat_id, played, dur):
         ],
           [
             # Skip - PRIMARY (Blue)
-            InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}", style=ButtonStyle.PRIMARY),
+            InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}", style=ButtonStyle.DANGER),
             
             # Pause - DANGER (Red)
-            InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}", style=ButtonStyle.DANGER),
+            InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}", style=ButtonStyle.SUCCESS),
             
             # Resume - SUCCESS (Green)
-            InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}", style=ButtonStyle.SUCCESS),
+            InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}", style=ButtonStyle.PRIMARY),
             
             # Replay - PRIMARY (Blue)
-            InlineKeyboardButton(text="↻", callback_data=f"ADMIN Replay|{chat_id}", style=ButtonStyle.PRIMARY),
+            InlineKeyboardButton(text="↻", callback_data=f"ADMIN Replay|{chat_id}", style=ButtonStyle.SUCCESS),
             
             # Stop - DANGER (Red)
             InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}", style=ButtonStyle.DANGER),
@@ -101,13 +101,13 @@ def stream_markup(_, videoid, chat_id):
             InlineKeyboardButton(
                 text="▷", 
                 callback_data=f"ADMIN Resume|{chat_id}", 
-                style=ButtonStyle.SUCCESS
+                style=ButtonStyle.DANGER
             ),
             # Pause - DANGER (Red)
             InlineKeyboardButton(
                 text="II", 
                 callback_data=f"ADMIN Pause|{chat_id}", 
-                style=ButtonStyle.DANGER
+                style=ButtonStyle.SUCCESS
             ),
             # Replay - PRIMARY (Blue)
             InlineKeyboardButton(
@@ -119,7 +119,7 @@ def stream_markup(_, videoid, chat_id):
             InlineKeyboardButton(
                 text="‣‣I", 
                 callback_data=f"ADMIN Skip|{chat_id}", 
-                style=ButtonStyle.PRIMARY
+                style=ButtonStyle.SUCCESS
             ),
             # Stop - DANGER (Red)
             InlineKeyboardButton(
@@ -333,13 +333,13 @@ def stream_markup2(_, chat_id):
             InlineKeyboardButton(
                 text="▷", 
                 callback_data=f"ADMIN Resume|{chat_id}", 
-                style=ButtonStyle.SUCCESS
+                style=ButtonStyle.DANGER
             ),
             # Pause - DANGER (Red)
             InlineKeyboardButton(
                 text="II", 
                 callback_data=f"ADMIN Pause|{chat_id}", 
-                style=ButtonStyle.DANGER
+                style=ButtonStyle.SUCCESS
             ),
             # Replay - PRIMARY (Blue)
             InlineKeyboardButton(
@@ -351,7 +351,7 @@ def stream_markup2(_, chat_id):
             InlineKeyboardButton(
                 text="‣‣I", 
                 callback_data=f"ADMIN Skip|{chat_id}", 
-                style=ButtonStyle.PRIMARY
+                style=ButtonStyle.SUCCESS
             ),
             # Stop - DANGER (Red)
             InlineKeyboardButton(
@@ -407,16 +407,16 @@ def stream_markup_timer2(_, chat_id, played, dur):
         ],
         [
             # Resume - SUCCESS (Green)
-            InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}", style=ButtonStyle.SUCCESS),
+            InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}", style=ButtonStyle.DANGER),
             
             # Pause - DANGER (Red)
-            InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}", style=ButtonStyle.DANGER),
+            InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}", style=ButtonStyle.SUCCESS),
             
             # Replay - PRIMARY (Blue)
             InlineKeyboardButton(text="↻", callback_data=f"ADMIN Replay|{chat_id}", style=ButtonStyle.PRIMARY),
             
             # Skip - PRIMARY (Blue)
-            InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}", style=ButtonStyle.PRIMARY),
+            InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}", style=ButtonStyle.SUCCESS),
             
             # Stop - DANGER (Red)
             InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}", style=ButtonStyle.DANGER),
