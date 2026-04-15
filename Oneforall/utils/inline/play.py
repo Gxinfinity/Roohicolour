@@ -10,29 +10,33 @@ from Oneforall.utils.formatters import time_to_seconds
 def track_markup(_, videoid, user_id, channel, fplay):
     buttons = [
         [
-            # Audio Button - SUCCESS (Green)
+            # Audio Button (Play) - SUCCESS (Green)
             InlineKeyboardButton(
-                text=_["P_B_1"],
+                text=" ",
                 callback_data=f"MusicStream {videoid}|{user_id}|a|{channel}|{fplay}",
                 style=ButtonStyle.SUCCESS,
+                icon_custom_emoji_id=5773626993010546707  # Play Sticker
             ),
-            # Video Button - PRIMARY (Blue)
+            # Video Button (Play) - PRIMARY (Blue)
             InlineKeyboardButton(
-                text=_["P_B_2"],
+                text=" ",
                 callback_data=f"MusicStream {videoid}|{user_id}|v|{channel}|{fplay}",
                 style=ButtonStyle.PRIMARY,
+                icon_custom_emoji_id=5773626993010546707  # Play Sticker
             ),
         ],
         [
             # Close Button - DANGER (Red)
             InlineKeyboardButton(
-                text=_["CLOSE_BUTTON"],
+                text=" ",
                 callback_data=f"forceclose {videoid}|{user_id}",
                 style=ButtonStyle.DANGER,
+                icon_custom_emoji_id=6269362834258269327  # Close Sticker
             )
         ],
     ]
     return buttons
+
 
 
 
@@ -82,48 +86,48 @@ def stream_markup_timer(_, vidid, chat_id, played, dur):
                 text=" ", 
                 callback_data=f"ADMIN Skip|{chat_id}", 
                 style=ButtonStyle.DANGER,
-                icon_custom_emoji_id=5114239772365163173
+                icon_custom_emoji_id=6289734637237309657 # Naya Skip Sticker
             ),
             # Pause Button - SUCCESS (Green)
             InlineKeyboardButton(
                 text=" ", 
                 callback_data=f"ADMIN Pause|{chat_id}", 
                 style=ButtonStyle.SUCCESS,
-                icon_custom_emoji_id=5850346984501680054
+                icon_custom_emoji_id=5359543311897998264 # Naya Pause Sticker
             ),
             # Resume Button - PRIMARY (Blue)
             InlineKeyboardButton(
                 text=" ", 
                 callback_data=f"ADMIN Resume|{chat_id}", 
                 style=ButtonStyle.PRIMARY,
-                icon_custom_emoji_id=5113954831349843630
+                icon_custom_emoji_id=5870892901159932239 # Naya Resume Sticker
             ),
             # Replay Button - SUCCESS (Green)
             InlineKeyboardButton(
                 text=" ", 
                 callback_data=f"ADMIN Replay|{chat_id}", 
                 style=ButtonStyle.SUCCESS,
-                icon_custom_emoji_id=5346321684574003384
+                icon_custom_emoji_id=5850346984501680054 # Naya Replay Sticker
             ),
             # Stop Button - DANGER (Red)
             InlineKeyboardButton(
                 text=" ", 
                 callback_data=f"ADMIN Stop|{chat_id}", 
                 style=ButtonStyle.DANGER,
-                icon_custom_emoji_id=5773626993010546707 # Using Play/Stop emoji here as per your request
+                icon_custom_emoji_id=5773626993010546707 # Play/Stop Sticker
             ),
         ],
         [
             # Close - DANGER (Red)
             InlineKeyboardButton(
-                text=_["CLOSE_BUTTON"], 
+                text=" ", 
                 callback_data="close", 
-                style=ButtonStyle.DANGER
+                style=ButtonStyle.DANGER,
+                icon_custom_emoji_id=6269362834258269327 # Naya Close Sticker
             )
         ],
     ]
     return buttons
-
 
 def stream_markup(_, videoid, chat_id):
     buttons = [
