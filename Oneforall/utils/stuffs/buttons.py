@@ -11,9 +11,9 @@ class BUTTONS(object):
         ],
         [
             # Primary (Blue) | Success (Green) | Primary (Blue)
-            InlineKeyboardButton("📢 Tᴀɢ-Aʟʟ", callback_data="mplus HELP_TagAll", style=ButtonStyle.PRIMARY),
+            InlineKeyboardButton("📢 Tᴀɢ-Aʟʟ", callback_data="mplus HELP_TagAll", style=ButtonStyle.DANGER),
             InlineKeyboardButton("ℹ️ Iɴꜰᴏ", callback_data="mplus HELP_Info", style=ButtonStyle.SUCCESS),
-            InlineKeyboardButton("⚙️ Exᴛʀᴀ", callback_data="mplus HELP_Extra", style=ButtonStyle.PRIMARY),
+            InlineKeyboardButton("⚙️ Exᴛʀᴀ", callback_data="mplus HELP_Extra", style=ButtonStyle.DANGER),
         ],
         [
             InlineKeyboardButton("👩‍❤️‍👨 ᴄᴏᴜᴘʟᴇꜱ", callback_data="mplus HELP_Couples", style=ButtonStyle.SUCCESS),
@@ -31,9 +31,9 @@ class BUTTONS(object):
             InlineKeyboardButton("🧩 Qᴜɪᴢ", callback_data="mplus HELP_Quiz", style=ButtonStyle.SUCCESS),
         ],
         [
-            InlineKeyboardButton("🗣️ ᴛᴛs", callback_data="mplus HELP_TTS", style=ButtonStyle.PRIMARY),
+            InlineKeyboardButton("🗣️ ᴛᴛs", callback_data="mplus HELP_TTS", style=ButtonStyle.DANGER),
             InlineKeyboardButton("📻 Rᴀᴅɪᴏ", callback_data="mplus HELP_Radio", style=ButtonStyle.SUCCESS),
-            InlineKeyboardButton("📝 ǫᴜᴏᴛʟʏ", callback_data="mplus HELP_Q", style=ButtonStyle.PRIMARY),
+            InlineKeyboardButton("📝 ǫᴜᴏᴛʟʏ", callback_data="mplus HELP_Q", style=ButtonStyle.DANGER),
         ],
         [
             # Navigation Buttons
