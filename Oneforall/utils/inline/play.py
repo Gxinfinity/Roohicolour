@@ -89,7 +89,7 @@ def stream_markup_timer(_, vidid, chat_id, played, dur):
                 text=" ", 
                 callback_data=f"ADMIN Pause|{chat_id}", 
                 style=ButtonStyle.SUCCESS,
-                icon_custom_emoji_id=5359543311897998264
+                icon_custom_emoji_id=5850346984501680054
             ),
             # Resume Button - PRIMARY (Blue)
             InlineKeyboardButton(
@@ -110,7 +110,7 @@ def stream_markup_timer(_, vidid, chat_id, played, dur):
                 text=" ", 
                 callback_data=f"ADMIN Stop|{chat_id}", 
                 style=ButtonStyle.DANGER,
-                icon_custom_emoji_id=5911274703367968100 # Using Play/Stop emoji here as per your request
+                icon_custom_emoji_id=5773626993010546707 # Using Play/Stop emoji here as per your request
             ),
         ],
         [
@@ -147,7 +147,7 @@ def stream_markup(_, videoid, chat_id):
                 text=" ", 
                 callback_data=f"ADMIN Replay|{chat_id}", 
                 style=ButtonStyle.PRIMARY,
-                icon_custom_emoji_id=5346321684574003384
+                icon_custom_emoji_id=5850346984501680054
             ),
             # Skip - SUCCESS (Green)
             InlineKeyboardButton(
@@ -161,7 +161,7 @@ def stream_markup(_, videoid, chat_id):
                 text=" ", 
                 callback_data=f"ADMIN Stop|{chat_id}", 
                 style=ButtonStyle.DANGER,
-                icon_custom_emoji_id=5911274703367968100
+                icon_custom_emoji_id=5773626993010546707
             ),
         ],
         [
