@@ -8,7 +8,6 @@ from Oneforall.utils.formatters import time_to_seconds
 
 
 def track_markup(_, videoid, user_id, channel, fplay):
-    def track_markup(_, videoid, user_id, channel, fplay):
     buttons = [
         [
             # Audio Button - SUCCESS (Green)
@@ -34,6 +33,7 @@ def track_markup(_, videoid, user_id, channel, fplay):
         ],
     ]
     return buttons
+
 
 
 def stream_markup_timer(_, vidid, chat_id, played, dur):
